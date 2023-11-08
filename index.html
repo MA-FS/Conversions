@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT100 Calculator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>PT100 Calculator</h1>
+</header>
+<main>
+    <section class="calculator">
+        <form id="pt100-form">
+            <div class="input-group">
+                <label for="units">Units:</label>
+                <select id="units" name="units">
+                    <option value="Celsius">°C</option>
+                    <option value="Fahrenheit">°F</option>
+                    <option value="Kelvin">K</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="thermometer-type">Thermometer type:</label>
+                <select id="thermometer-type" name="thermometer_type">
+                    <option value="PT-385">PT-385</option>
+                    <option value="PT-392">PT-392</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="nominal-resistance">R0 nominal value (Ω):</label>
+                <select id="nominal-resistance" name="nominal_resistance">
+                    <option value="100">100 Ω</option>
+                    <option value="500">500 Ω</option>
+                    <option value="1000">1000 Ω</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="resistance-input">Enter resistance (Ω):</label>
+                <input type="number" id="resistance-input" name="resistance_input" placeholder="Resistance">
+                <p class="result-display">Calculated temperature: <span id="calculated-temperature">-</span></p>
+            </div>
+            
+            <div class="input-group">
+                <label for="temperature-input">Enter temperature:</label>
+                <input type="number" id="temperature-input" name="temperature_input" placeholder="Temperature">
+                <p class="result-display">Calculated resistance: <span id="calculated-resistance">-</span></p>
+                <p class="result-display">Calculated dR/dT: <span id="calculated-dr-dt">-</span></p>
+            </div>
+            
+            <button type="button" id="calculate-button">Calculate</button>
+            
+        </form>
+    </section>
+    <!-- Additional sections for tutorial, download, and support can go here -->
+</main>
+<footer>
+    <!-- Footer content here -->
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
